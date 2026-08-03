@@ -1,3 +1,10 @@
+### MegaLinter ###
+# Local run artifacts from oxsecurity/megalinter - only ever meant to be
+# uploaded as a CI artifact, never committed (see .github/workflows/mega-linter.yml)
+.megalinter_github_conf/
+megalinter-reports/
+mega-linter.log
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,visualstudiocode,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,visualstudiocode,git
 
