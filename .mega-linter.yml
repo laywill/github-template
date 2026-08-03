@@ -9,10 +9,6 @@ SHOW_ELAPSED_TIME: true
 PARALLEL: true
 FILEIO_REPORTER: false
 
-# Linters Configuration
-DISABLE:
-  - COPYPASTE  # Disable copy-paste detection
-
 DISABLE_LINTERS:
   - JSON_PRETTIER  # Disable beautifying JSON with Prettier
   - YAML_PRETTIER  # Disable beautifying YAML with Prettier
