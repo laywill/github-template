@@ -11,14 +11,14 @@ opening an issue.
 
 1. Fork/branch and make your changes.
 2. If you have [pre-commit](https://pre-commit.com/) installed, run
-   `pre-commit run --all-files` before committing — it catches most issues
-   locally, faster than waiting for CI.
+    `pre-commit run --all-files` before committing — it catches most issues
+    locally, faster than waiting for CI.
 3. Open a pull request using the provided
-   [PR template](.github/PULL_REQUEST_TEMPLATE.md).
+    [PR template](.github/PULL_REQUEST_TEMPLATE.md).
 4. [MegaLinter](https://megalinter.io/) runs in CI on every PR; fix any
-   reported issues (or apply its suggested auto-fixes).
+    reported issues (or apply its suggested auto-fixes).
 5. A reviewer will be automatically requested per
-   [CODEOWNERS](.github/CODEOWNERS).
+    [CODEOWNERS](.github/CODEOWNERS).
 
 ## Code of Conduct
 

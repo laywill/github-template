@@ -22,7 +22,7 @@
     "companies"
   ],
   // Add project-specific terms here as they come up, e.g. "words": ["myterm"]
-  "words": [],
+  "words": ["laywill", "Linters", "LINTERS", "JSONLINT"],
   "ignorePaths": [
     ".git",
     ".github",
