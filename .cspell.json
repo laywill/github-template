@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "dictionaries": [
+    "en-GB",
+    "softwareTerms",
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "bash",
+    "python",
+    "yaml",
+    "json",
+    "markdown",
+    "git",
+    "npm",
+    "docker",
+    "filetypes",
+    "fonts",
+    "misc",
+    "companies"
+  ],
+  // Add project-specific terms here as they come up, e.g. "words": ["myterm"]
+  "words": ["laywill", "Linters", "LINTERS", "JSONLINT"],
+  "ignorePaths": [
+    ".git",
+    ".github",
+    "node_modules",
+    "megalinter-reports"
+  ]
+}

@@ -1,0 +1,38 @@
+---
+# MegaLinter Configuration
+# https://megalinter.github.io/
+
+# Core Configuration
+APPLY_FIXES: yes
+DISABLE_ERRORS: false
+SHOW_ELAPSED_TIME: true
+PARALLEL: true
+FILEIO_REPORTER: false
+
+DISABLE_LINTERS:
+  - JSON_PRETTIER  # Disable beautifying JSON with Prettier
+  - YAML_PRETTIER  # Disable beautifying YAML with Prettier
+
+# Not worried if Lychee finds dead links
+SPELL_LYCHEE_DISABLE_ERRORS: true
+
+# Exclude GitHub-relative links that only resolve correctly when rendered on
+# GitHub (e.g. SECURITY.md's "../../issues/new/choose" link), since Lychee
+# checks them against the local filesystem instead.
+SPELL_LYCHEE_ARGUMENTS: "--exclude 'issues/new/choose'"
+
+# JSON Configuration
+# --bom               Ignore the leading UTF-8 byte-order mark
+# --comments          Allow comments in JSON files
+# --trailing-newline  Ensure a trailing newline at the end of JSON files
+# --trailing-commas   Allow trailing commas in JSON files
+JSON_JSONLINT_ARGUMENTS: "--comments --trailing-newline --trailing-commas"
+
+# CSpell Config
+SPELL_CSPELL_FILTER_REGEX_EXCLUDE: (\.cspell\.json|\.gitignore)
+
+# Filter Configuration
+FILTER_REGEX_EXCLUDE: (\.git|\.venv|\.pytest_cache|\.vscode|__pycache__)
+
+# Checkov Configuration
+REPOSITORY_CHECKOV_ARGUMENTS: "--skip-check CKV2_GHA_1"
