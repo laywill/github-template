@@ -31,6 +31,12 @@ JSON_JSONLINT_ARGUMENTS: "--comments --trailing-newline --trailing-commas"
 # CSpell Config
 SPELL_CSPELL_FILTER_REGEX_EXCLUDE: (\.cspell\.json|\.gitignore)
 
+# EditorConfig Checker Config
+# Exclude LICENSE: it is the canonical Apache License 2.0 text copied
+# verbatim from apache.org and should not be reformatted to satisfy
+# indent-size rules.
+EDITORCONFIG_EDITORCONFIG_CHECKER_FILTER_REGEX_EXCLUDE: (LICENSE)
+
 # Filter Configuration
 FILTER_REGEX_EXCLUDE: (\.git|\.venv|\.pytest_cache|\.vscode|__pycache__)
 
