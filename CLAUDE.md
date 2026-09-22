@@ -65,10 +65,22 @@ significant for line breaks there).
 
 ## GitHub Actions conventions
 
-- Every action is pinned to a full commit SHA with a trailing `# vX.Y.Z`
-  comment; Dependabot ([.github/dependabot.yml](.github/dependabot.yml))
-  updates them weekly. Keep that shape for any action you add — a tag-only
-  reference will fail review/scanning.
+- **Every action reference in every workflow must be pinned to a full-length
+  commit SHA, followed by a trailing comment naming the semantic version.**
+  No tags, no branch names, no abbreviated SHAs:
+
+  ```yaml
+  uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+  ```
+
+  A tag is a moving target — it can be repointed at different code after
+  review — so a tag-only reference will fail review and supply-chain
+  scanning. The version comment is what keeps the pin readable and
+  reviewable; without it a SHA bump is an opaque diff. Dependabot
+  ([.github/dependabot.yml](.github/dependabot.yml)) updates both the SHA and
+  the comment weekly, so keep the comment accurate rather than dropping it.
+  This applies to any workflow added later, not just the ones in
+  [.github/workflows/](.github/workflows/) today.
 - Workflows declare `permissions: {}` at the top level and grant the minimum
   per job.
 - [codeql.yml](.github/workflows/codeql.yml) has a language matrix that is
